@@ -7,8 +7,12 @@ ARCH=$(uname -m)
 echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
+    gcc-libs \
     glu \
-    gtk4 \
+    libx11 \
+    libxcb \
+    libxau \
+    libxdmcp \
     openal
 
 echo "Installing debloated packages..."
