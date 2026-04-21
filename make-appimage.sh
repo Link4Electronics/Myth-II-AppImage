@@ -12,6 +12,7 @@ export ICON=DUMMY
 export DESKTOP=DUMMY
 export MAIN_BIN=Myth2_64bit
 export STARTUPWMCLASS=Myth2_64bit
+export DEPLOY_OPENGL=1
 
 # Deploy dependencies
 quick-sharun ./AppDir/bin/Myth2_64bit
