@@ -8,7 +8,8 @@ echo "Installing package dependencies..."
 echo "---------------------------------------------------------------"
 pacman -Syu --noconfirm \
     glu \
-    gtk4
+    gtk4 \
+    openal
 
 echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
