@@ -1,0 +1,7 @@
+#!/bin/sh
+dir=$HOME/MythII
+mkdir -p "$dir"
+if [ ! -f "$dir/plugins/Patch 1.8.5 Unity" ]; then
+  cp -r "$APPDIR"/bin/plugins "$dir"
+fi
+cd "$dir"
