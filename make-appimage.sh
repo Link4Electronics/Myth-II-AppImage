@@ -17,7 +17,6 @@ export DEPLOY_OPENGL=1
 # Deploy dependencies
 quick-sharun ./AppDir/bin/Myth2_64bit
 
-# Additional changes can be done in between here
 rm -rf ./AppDir/bin/cutscenes ./AppDir/bin/local ./AppDir/bin/tags ./AppDir/bin/myth_log.txt
 
 # Turn AppDir into AppImage
