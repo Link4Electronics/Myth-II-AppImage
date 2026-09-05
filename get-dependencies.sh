@@ -12,6 +12,8 @@ echo "Installing debloated packages..."
 echo "---------------------------------------------------------------"
 get-debloated-pkgs --add-common --prefer-nano
 
+make-aur-package zenity-rs-bin
+
 echo "Getting app..."
 echo "---------------------------------------------------------------"
 VERSION=1.8.5
