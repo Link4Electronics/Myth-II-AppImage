@@ -1,11 +1,12 @@
 #!/bin/sh
 
 dir="$HOME/.MythII"
-export SHARUN_DIR="$APPDIR"
 export MYTH2_BASE="$dir"
 
+mkdir -p "$dir"
 cd "$dir"
-cp "$APPDIR"/sharun    ./
+
+cp "$APPDIR"/sharun    ./ 2>/dev/null || exit 1
 cp "$APPDIR"/.env      ./ 2>/dev/null || :
 cp "$APPDIR"/.preload  ./ 2>/dev/null || :
 
@@ -13,9 +14,8 @@ if [ ! -f "$dir/plugins/Patch 1.8.5 Unity" ]; then
   cp -r "$APPDIR/bin/plugins" "$dir"
 fi
 
-mkdir -p ./bin
-rm -f ./bin/Myth2_64bit
-ln -f ./sharun ./bin/Myth2_64bit
+rm -f ./Myth2_64bit
+ln -f ./sharun ./Myth2_64bit
 
 for d in lib share shared etc; do
   if [ -d "$APPDIR"/"$d" ]; then
@@ -23,4 +23,4 @@ for d in lib share shared etc; do
   fi
 done
 
-exec ./bin/Myth2_64bit "$@"
+exec ./Myth2_64bit "$@"
