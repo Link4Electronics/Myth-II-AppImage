@@ -1,11 +1,8 @@
 #!/bin/sh
-
 dir="$HOME/.MythII"
 export MYTH2_BASE="$dir"
-
 mkdir -p "$dir"
 cd "$dir"
-
 cp "$APPDIR"/sharun    ./ 2>/dev/null || exit 1
 cp "$APPDIR"/.env      ./ 2>/dev/null || :
 cp "$APPDIR"/.preload  ./ 2>/dev/null || :
