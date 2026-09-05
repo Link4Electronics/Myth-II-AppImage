@@ -3,20 +3,15 @@
 set -eu
 
 ARCH=$(uname -m)
-VERSION=1.8.5
-export ARCH VERSION
+export ARCH
 export OUTPATH=./dist
 export ADD_HOOKS="self-updater.hook"
 export UPINFO="gh-releases-zsync|${GITHUB_REPOSITORY%/*}|${GITHUB_REPOSITORY#*/}|latest|*$ARCH.AppImage.zsync"
 export ICON=DUMMY
-export DESKTOP=DUMMY
-export MAIN_BIN=Myth2_64bit
-export STARTUPWMCLASS=Myth2_64bit
 export DEPLOY_OPENGL=1
 
 # Deploy dependencies
-quick-sharun ./AppDir/bin/Myth2_64bit
-
+quick-sharun ./AppDir/bin/Myth2_64bit /usr/lib/libopenal.so*
 rm -rf ./AppDir/bin/cutscenes ./AppDir/bin/local ./AppDir/bin/tags ./AppDir/bin/myth_log.txt
 
 # Turn AppDir into AppImage
