@@ -8,7 +8,7 @@ if [ ! -f "$dir/plugins/Patch 1.8.5 Unity" ]; then
 fi
 
 if [ ! -x "$dir/Myth2_64bit" ]; then
-  ln -sf "$APPDIR/shared/bin/Myth2_64bit" "$dir/Myth2_64bit"
+  cp -f "$APPDIR/shared/bin/Myth2_64bit" "$dir/Myth2_64bit"
 fi
 cd "$dir"
 exec ./Myth2_64bit "$@"
