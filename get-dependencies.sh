@@ -18,7 +18,7 @@ echo "Getting app..."
 echo "---------------------------------------------------------------"
 VERSION=1.8.5
 echo "$VERSION" > ~/version
-wget "https://projectmagma.net/downloads/myth2_updates/1.8.5%20Final%20(Build%20471b)/Myth2_185_Linux.tar.gz"
+#wget "https://projectmagma.net/downloads/myth2_updates/1.8.5%20Final%20(Build%20471b)/Myth2_185_Linux.tar.gz"
 tar -xvf ./Myth2_185_Linux.tar.gz
 rm -f ./*.gz ./*.pdf ./*.txt ./Myth2_32bit ./.DS_Store
 
