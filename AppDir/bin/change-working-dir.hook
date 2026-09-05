@@ -1,8 +1,14 @@
 #!/bin/sh
 dir=$HOME/.MythII
 export SHARUN_DIR="$APPDIR"
+export MYTH2_BASE="$dir"
 mkdir -p "$dir"
 if [ ! -f "$dir/plugins/Patch 1.8.5 Unity" ]; then
-  cp -r "$APPDIR"/bin/plugins "$dir"
+  cp -r "$APPDIR/bin/plugins" "$dir"
+fi
+
+if [ ! -x "$dir/Myth2_64bit" ]; then
+  cp -f "$APPDIR/shared/bin/Myth2_64bit" "$dir/Myth2_64bit"
 fi
 cd "$dir"
+exec ./Myth2_64bit "$@"
