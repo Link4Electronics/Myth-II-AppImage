@@ -12,6 +12,8 @@ export DEPLOY_OPENGL=1
 # Deploy dependencies
 quick-sharun ./AppDir/bin/Myth2_64bit /usr/lib/libopenal.so*
 rm -rf ./AppDir/bin/cutscenes ./AppDir/bin/local ./AppDir/bin/tags ./AppDir/bin/myth_log.txt
+# this app has problems with other locales breaking physics
+echo 'LC_ALL=C.UTF-8' >> ./AppDir/.env
 
 # Turn AppDir into AppImage
 quick-sharun --make-appimage
